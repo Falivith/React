@@ -56,4 +56,13 @@
     display: flex; /* display: block já aplica width: 100% */
     align-items: center;
     justify-content: center;
+    
+    gap: 0.75rem;
+
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.sidebar footer a:hover {
+    background: var(--green-500);
+    color: white;
 }
