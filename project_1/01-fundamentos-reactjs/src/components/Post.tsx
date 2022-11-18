@@ -14,16 +14,34 @@ export function Post (){
                         <span>English Teacher</span>
                     </div>
                 </div>
-                    <time 
+                    <time
                         title="11 de Maio às 08:13h" 
                         dateTime="2022-05-11 08:13:30">
+                            Publicado há 2h
                     </time>
             </header>
+
             <div className = {styles.content}>
-                    <p> Lorem, ipsum dolor sit amet consecteturp adipisicing elit. Cupiditate, officia quam sunt placeat suscipit, vero non laudantium debitis doloribus, magni dolore maxime temporibus culpa saepe dolor cumque. Eveniet, eum in!</p>
-                    <a href="#"><p>github.com</p></a>
-                    <a href="#"><p>#newproject #github #new</p></a> 
+                    <p> LO Lorem, ipsum dolor sit amet consecteturp adipisicing elit. Cupiditate, officia quam sunt placeat suscipit, vero non laudantium debitis doloribus, magni dolore maxime temporibus culpa saepe dolor cumque. Eveniet, eum in!</p>
+                    <p>
+                        <a href="#">github.com</a>{'  '}
+                        <a href="#">#newproject</a>{'  '}
+                        <a href="#">#github</a>{'  '}
+                        <a href="#">#new</a>
+                    </p>
             </div>
+
+            <form className={styles.commentForm}>
+                <strong>Deixe seu feedback</strong>
+                <textarea
+                    placeholder="Deixe um comentário"
+                />
+
+                <footer>
+                    <button type='submit'>Publicar</button>                    
+                </footer>
+
+            </form>
         </article>
     );
 }
