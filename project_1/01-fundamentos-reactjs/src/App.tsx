@@ -6,9 +6,19 @@ import { Post } from './components/Post';
 import './global.css';
 import styles from './App.module.css';
 
-export function App() {
-  const [count, setCount] = useState(0)
+const posts = [
+  {
+    id: 1,
+    author: {
+      avatarUrl: 'https://github.com/falivith.png',
+      name: 'Gabriel Ramires',
+      role: 'Web Developer'
+    },
+    content: "a"
+  }
+];
 
+export function App() {
   return (
     <div>
       <Header/>
