@@ -1,28 +1,23 @@
 import styles from './Post.module.css';
+import { Comment } from './Comment'
+import { Avatar } from './Avatar'
 
 export function Post (){
     return(
         <article className={styles.post}>
             <header>
                 <div className={styles.author}>
-                    <img 
-                        className={styles.avatar}
-                        src="https://scontent.fcxj1-1.fna.fbcdn.net/v/t39.30808-6/298224412_3155183981398399_4588645305864048923_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeHKQ_ZV-h4TtLJQ65NcegIS-HTPLhaAk0j4dM8uFoCTSC9ZYoWfStlRH9xRoORgl9wAkob8t0LHCBH-JM95DU-j&_nc_ohc=7hJU8et3UtwAX8h4Fcz&_nc_ht=scontent.fcxj1-1.fna&oh=00_AfDrdTHCu9bX6eXi_W2F-7xinh9bCckCfX5LqddD-vcdNw&oe=6377CC78"
-                    />
+                    <Avatar hasBorder src="https://github.com/rafamattia2.png"/>
                     <div className={styles.authorInfo}>
-                        <strong>Júlia Braga</strong>
-                        <span>English Teacher</span>
+                        <strong>Rafael Mattia</strong>
+                        <span>Java Developer</span>
                     </div>
                 </div>
-                    <time
-                        title="11 de Maio às 08:13h" 
-                        dateTime="2022-05-11 08:13:30">
-                            Publicado há 2h
-                    </time>
+                    <time title="11 de Maio às 08:13h" dateTime="2022-05-11 08:13:30"> Publicado há 2h </time>
             </header>
 
             <div className = {styles.content}>
-                    <p> LO Lorem, ipsum dolor sit amet consecteturp adipisicing elit. Cupiditate, officia quam sunt placeat suscipit, vero non laudantium debitis doloribus, magni dolore maxime temporibus culpa saepe dolor cumque. Eveniet, eum in!</p>
+                    <p>Lorem, ipsum dolor sit amet consecteturp adipisicing elit. Cupiditate, officia quam sunt placeat suscipit, vero non laudantium debitis doloribus, magni dolore maxime temporibus culpa saepe dolor cumque. Eveniet, eum in!</p>
                     <p>
                         <a href="#">github.com</a>{'  '}
                         <a href="#">#newproject</a>{'  '}
@@ -33,15 +28,17 @@ export function Post (){
 
             <form className={styles.commentForm}>
                 <strong>Deixe seu feedback</strong>
-                <textarea
-                    placeholder="Deixe um comentário"
-                />
-
+                <textarea placeholder="Deixe um comentário"></textarea>
                 <footer>
                     <button type='submit'>Publicar</button>                    
                 </footer>
-
             </form>
+
+            <div className={styles.commentList}>
+                <Comment />
+                <Comment />
+                <Comment />
+            </div>
         </article>
     );
 }
