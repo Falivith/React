@@ -6,6 +6,10 @@ import { Post } from './components/Post';
 import './global.css';
 import styles from './App.module.css';
 
+// author ( avatar_url: "", name: "", role: "")
+// publishedAt: Date
+// content: String
+
 const posts = [
   {
     id: 1,
@@ -14,7 +18,9 @@ const posts = [
       name: 'Gabriel Ramires',
       role: 'Web Developer'
     },
-    content: "a"
+    content: [
+      
+    ]
   }
 ];
 
